@@ -1,10 +1,16 @@
 package Car_Dealership;
 
 public class Vehicle {
-    private double price;
     private String make;
     private String model;
+    private double price;
 
+    public Vehicle(String make, String model, String price) {
+        super();
+        this.make = make;
+        this.model = model;
+        this.price = Double.parseDouble(price);
+    }
 
     public double getPrice() {
         return price;
@@ -12,6 +18,17 @@ public class Vehicle {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "make=" + make +
+                ", model='" + model + '\'' +
+                ", price='" + price + '\'' +
+                '}';
     }
 
     public String getMake() {
